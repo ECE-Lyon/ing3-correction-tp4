@@ -2,8 +2,12 @@ package geometry;
 
 public class Square extends Rectangle {
 
+    public Square(double length, String color, boolean filled, Point point) {
+        super(length, length, color, filled, point);
+    }
+
     public Square(double length, String color, boolean filled) {
-        super(length, length, color, filled);
+        super(length, length, color, filled, new Point(0, 0));
     }
 
     @Override

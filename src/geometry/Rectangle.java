@@ -7,7 +7,11 @@ public class Rectangle extends Shape {
     private double width;
 
     public Rectangle(double length, double width, String color, boolean filled) {
-        super(color, filled);
+        this(length, width, color, filled, new Point(0, 0));
+    }
+
+    public Rectangle(double length, double width, String color, boolean filled, Point point) {
+        super(color, filled, point);
         this.length = length;
         this.width = width;
     }
@@ -32,6 +36,7 @@ public class Rectangle extends Shape {
         return 2 * (width + length);
     }
 
+    @Override
     public double getArea() {
         return width * length;
     }
